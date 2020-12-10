@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Take it back{% endblock %}
+
+{% block content %}
+<div class="first">
+  <h2>Take it back</h2>
+  <h3>You will never know which one we took</h3>
+</div>
+<h2>Results:</h2>
+<DIV>
+  <a class="nav-item nav-link" href="{{ url_for('userinsults') }}">Can you handle more then ONE insult at a time? Have a list of them</a>
+  <a class="nav-item nav-link" href="{{ url_for('logout') }}">Log Out</a>
+</div>
+  {% endblock %}
+
+

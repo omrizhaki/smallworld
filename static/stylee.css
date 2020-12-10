@@ -1,0 +1,42 @@
+html {
+  margin: 5em;
+}
+body {
+    margin-top: 14%;
+    background-image: url('image/imgur.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: 40%;
+    font-family: Quicksand;
+  }
+#results {
+  margin: 0.5em;
+  background: rgba(230, 230, 230, 0.7);
+}
+.insult-details {
+  display: block;
+}
+.insult-property {
+  display: block;
+}
+.choose {
+  background: rgba(230, 230, 230, 0.5);
+}
+.not_available {
+  color: red;
+  margin-top: 1%;
+}
+h1 {
+  text-align: center;
+  color: RGB(104, 22, 124);
+  background: rgba(230, 230, 230, 0.7);
+  padding: 4px;
+}
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: RGB(104, 22, 124);
+}
+h4 {
+  color: black;
+}

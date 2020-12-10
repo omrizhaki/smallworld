@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}user insults{% endblock %}
+
+{% block content %}
+<div class="first">
+  <h3>Here are all of your insults by langauge</h3>
+</div>
+<h2>Results:</h2>
+<div id="results">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Language</th>
+        <th scope="col">Insult</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ins in insult %}
+      <tr>
+       <td>{{ ins.language }}</td>
+       <td>{{ ins.insult }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+    <a class="nav-item nav-link" href="{{ url_for('deleteinsults') }}">Deleteing an insult from the list?</a>
+    <a class="nav-item nav-link" href="{{ url_for('insults') }}">Have another insult</a>
+    <a class="nav-item nav-link" href="{{ url_for('logout') }}">Log Out</a>
+</div>
+  {% endblock %}
+
+
