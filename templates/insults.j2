@@ -1,0 +1,34 @@
+{% extends "base.j2" %}
+{% block title %}Enjoy or not{% endblock %}
+
+{% block content %}
+<div class="choose">
+  <h4><strong>Choose one of the following languages:</strong></h4>
+  <h5>Chinese, German, Greek, English, Spanish, French, Russian, Swahili, Italian</h5>
+</div>
+<div id="search">
+  <form id="search-form" class="row" method="GET" action="/insults">
+    <div class="col-auto">
+      <label for="language" class="visually-hidden">language</label>
+      <input class="form-control" id="language" name="language" type="text" placeholder="English" tabindex=0 autofocus>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-secondary">Generate</button>
+    </div>
+  </form>
+</div>
+<div class="not_available">
+  {% if not_available %}
+    {{not_available}}
+  {% endif %}
+</div>    
+<h2>Results</h2>
+<div id="results">
+  <div class="insult-details">
+    <div class="the language insult-property">The language: {{language}}</div>
+    <div class="the insult insult-property">The insult: {{insult}}</div>
+    <a class="nav-item nav-link" href="{{ url_for('userinsults') }}">Insult History</a>
+    <a class="nav-item nav-link" href="{{ url_for('logout') }}">Log Out</a>
+  </div>
+</div>
+{% endblock %}
