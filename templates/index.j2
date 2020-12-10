@@ -1,0 +1,31 @@
+{% extends "base.j2" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="choose">
+  <h4><strong>LOGIN</strong></h4>
+</div>
+<div id="search">
+  <form id="search-form" class="row" method="GET" action="/">
+    <div class="form-group">
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="Email">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="Password">
+    </div><br>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-secondary">Submit</button>
+    </div>
+  </form>
+</div>
+<h2></h2>
+<div id="results">
+  {% if result %}
+  <div class="insult-details">
+    <div class="the language insult-property">Logged {{username}}</div>
+  </div>
+    <a class="nav-item nav-link" href="{{ url_for('Insults') }}">Try us</a>
+  {% endif %}
+  <a class="nav-item nav-link" href="{{ url_for('signup') }}">Sign up</a>
+</div>
+{% endblock %}

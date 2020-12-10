@@ -1,0 +1,32 @@
+{% extends "base.j2" %}
+{% block title %}Insult History{% endblock %}
+
+{% block content %}
+<div class="first">
+  <h3>Insult Historye</h3>
+</div>
+<h2>Results:</h2>
+<div id="results">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Language</th>
+        <th scope="col">Insult</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ins in insult %}
+      <tr>
+       <td>{{ ins.language }}</td>
+       <td>{{ ins.insult }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+    <a class="nav-item nav-link" href="{{ url_for('deleteinsults') }}">Delete an insult from the list?</a>
+    <a class="nav-item nav-link" href="{{ url_for('insults') }}">Genarate a new insult</a>
+    <a class="nav-item nav-link" href="{{ url_for('logout') }}">Log Out</a>
+</div>
+  {% endblock %}
+
+
